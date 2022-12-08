@@ -1,0 +1,11 @@
+# Rule: Specify a specific tag other than latest in FROM
+DS001
+
+# Rule: Specify at least 1 USER command in Dockerfile with non-root user as argument
+DS002 
+
+# Ignore using cd in Dockerfile - https://avd.aquasec.com/misconfig/dockerfile/general/avd-ds-0013/
+AVD-DS-0013
+
+# Ignore using both curl and wget - https://avd.aquasec.com/misconfig/dockerfile/general/avd-ds-0014/
+AVD-DS-0014
