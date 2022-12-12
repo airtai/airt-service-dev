@@ -1,5 +1,10 @@
 FROM ghcr.io/airtai/nbdev-mkdocs:latest
 
+# Install apt dependencies
+RUN apt update -y && apt install --assume-yes --fix-missing --no-install-recommends\
+      gettext-base default-libmysqlclient-dev virtualenv \
+    && apt purge --auto-remove && apt clean && rm -rf /var/lib/apt/lists/*
+
 # Install azure cli
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
