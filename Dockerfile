@@ -1,8 +1,11 @@
 FROM ghcr.io/airtai/nbdev-mkdocs:latest
 
+# Use python 3.9 and install python3.9-dev
+RUN update-alternatives --set python3 /usr/bin/python3.9
+
 # Install apt dependencies
 RUN apt update -y && apt install --assume-yes --fix-missing --no-install-recommends\
-      gettext-base default-libmysqlclient-dev virtualenv \
+      python3.9-dev gettext-base default-libmysqlclient-dev virtualenv \
     && apt purge --auto-remove && apt clean && rm -rf /var/lib/apt/lists/*
 
 # Install azure cli
