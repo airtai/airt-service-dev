@@ -33,3 +33,5 @@ RUN wget https://github.com/aquasecurity/trivy/releases/download/v0.32.1/trivy_0
 
 # Install git secret scanners
 RUN git clone https://github.com/awslabs/git-secrets.git && cd git-secrets && make install && cd ../ && rm -rf git-secrets
+
+RUN echo 'export PATH=$PATH:/home/$USER/.local/bin' >> ~/.bashrc 
