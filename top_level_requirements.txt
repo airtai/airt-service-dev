@@ -1,2 +1,4 @@
 # dev tools
 awscli==1.27.25
+nbqa==1.6.1 
+isort==5.12.0
