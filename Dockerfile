@@ -5,7 +5,7 @@ RUN update-alternatives --set python3 /usr/bin/python3.9
 
 RUN python3 -m pip install --upgrade pip
 
-RUN ls -la
+COPY top_level_requirements.txt ./top_level_requirements.txt
 RUN python3 -m pip install --no-cache-dir -r top_level_requirements.txt
 RUN wget https://raw.githubusercontent.com/airtai/nbdev-mkdocs/main/docker/top_level_requirements.txt -O top_level_requirements.txt \
     && python3 -m pip install --no-cache-dir -r top_level_requirements.txt \
