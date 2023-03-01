@@ -1,5 +1,5 @@
 # dev tools
-awscli==1.27.25
-nbqa==1.6.1 
+awscli==1.27.81
+nbqa==1.6.3
 isort==5.12.0
-black==22.10.0
+black==23.1.0
