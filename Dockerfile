@@ -33,8 +33,8 @@ RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 RUN curl -sL --http1.1 https://cnfl.io/cli | sh -s -- -b /usr/local/bin v2.37.0
 
 # Install trivy
-RUN wget https://github.com/aquasecurity/trivy/releases/download/v0.32.1/trivy_0.32.1_Linux-64bit.deb && \
-    dpkg -i  trivy_0.32.1_Linux-64bit.deb && rm trivy_0.32.1_Linux-64bit.deb
+RUN wget https://github.com/aquasecurity/trivy/releases/download/v0.37.3/trivy_0.37.3_Linux-64bit.deb && \
+    dpkg -i trivy_0.37.3_Linux-64bit.deb && rm trivy_0.37.3_Linux-64bit.deb
 
 # Install git secret scanners
 RUN git clone https://github.com/awslabs/git-secrets.git && cd git-secrets && make install && cd ../ && rm -rf git-secrets
